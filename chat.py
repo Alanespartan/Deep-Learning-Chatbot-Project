@@ -8,9 +8,9 @@ from tkinter import *
 from keras.models import load_model
 
 model = load_model('model.h5')
-intents = json.loads(open('intents.json').read())
+intents = json.loads(open('intents.json').read()) # corona.json when file is ready and cleaned
 words = pickle.load(open('words.pkl','rb'))
-classes = pickle.load(open('classes.pkl','rb'))
+classes = pickle.load(open('classes.pkl','rb')) 
 lemmatizer = WordNetLemmatizer()
 
 ################################################################ CHATBOT HELPER FUNCTIONS ##################################################################

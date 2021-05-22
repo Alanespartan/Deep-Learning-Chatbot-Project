@@ -14,7 +14,7 @@ words=[]
 classes = []
 documents = []
 ignore_words = ['?', '!']
-data_file = open('intents.json').read()
+data_file = open('intents.json').read() # corona.json when file is ready and cleaned
 intents = json.loads(data_file)
 
 ################################################################ SET UP DATA ##################################################################
