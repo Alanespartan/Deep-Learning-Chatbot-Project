@@ -10,9 +10,11 @@ class Parser:
             if res["tag"] == tag:
                 for field in res:
                     if field == "patterns":
-                        res[field].append(pattern)
+                        if not (pattern == "" or tag == "_"):
+                            res[field].append(pattern)
                     elif field == "responses":
-                        res[field].append(response)
+                        if not (response == "" or tag == "_"):
+                            res[field].append(response)
     
     def removeDuplicates(self, array):
         return list(set(array))
