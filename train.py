@@ -14,7 +14,7 @@ words=[]
 classes = []
 documents = []
 ignore_words = ['?', '!']
-data_file = open('dataset_covid.json').read() # corona.json when file is ready and cleaned
+data_file = open('intents.json').read() # corona.json when file is ready and cleaned
 intents = json.loads(data_file)
 
 ################################################################ SET UP DATA ##################################################################
@@ -82,7 +82,7 @@ sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 # fitting and saving the model 
-hist = model.fit(np.array(train_x), np.array(train_y), epochs=10000, batch_size=5, verbose=1)
+hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 model.save('model.h5', hist)
 
 # print information
@@ -90,3 +90,4 @@ print("model created")
 print (len(documents), "documents") # documents = combination between patterns and intents
 print (len(classes), "classes") # classes = intents
 print (len(words), "unique lemmatized words") # words = all words, vocabulary
+print(classes)
