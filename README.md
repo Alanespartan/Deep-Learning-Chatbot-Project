@@ -1,6 +1,23 @@
-# Deep-Learning-Chatbot-Project
+# Deep Learning Chatbot Project
+
+## System Requirements
+* Python 3.9.5 x64 bit (Tensorflow doesn’t run on 32-bit distributions)
+* Tensorflow 2.5.0
+* Keras 2.4.3
+* nltk 3.6.2
+* numpy 1.19.5
 
 ## Test Chatbot
+### Create Model
+```
+python train.py
+```
+
+### Run Chatbot
+```
+python chat.py
+```
+
 ### Medical Support Intent Dataset Messages
 - hello there my chatbot friend
 - help me
