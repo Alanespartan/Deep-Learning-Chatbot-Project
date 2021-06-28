@@ -35,3 +35,6 @@ python chat.py
 - how much people have been infected
 
 Covid model doesnt have a 100% accuracy so it may return an empty answer
+
+## Link to medium tutorial
+https://a01701804.medium.com/build-a-python-chatbot-using-keras-nltk-db19eea77f74
